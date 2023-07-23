@@ -11,14 +11,14 @@ function primeUserChoice () {
     alert ('You aborted this game. To start new game just refresh the page.');
   } 
   switch (userChoice.toLowerCase()) {
-  case 'rock':
-    return userChoice = 'rock';
-  case userChoice = 'scissors':
-    return 'scissors';
-  case userChoice = 'paper':
-    return 'paper';
-  default:
-    primeUserChoice();
+    case 'rock':
+      return 'rock';
+    case userChoice = 'scissors':
+      return 'scissors';
+    case userChoice = 'paper':
+      return 'paper';
+    default:
+      primeUserChoice();
   }
 } 
 
@@ -29,7 +29,7 @@ function randomNumber (numMin, numMax) {
 function game () {
   (primeUserChoice ());
   machineChoise = gameArray [randomNumber (0, 3)];
-  alert (`Computer move is: ${machineChoise}`)
+  alert (`Computer move is: ${machineChoise}`);
 
   if (userChoice === 'rock' && machineChoise === 'rock' || userChoice === 'scissors' && machineChoise === 'scissors' || userChoice === 'paper' && machineChoise === 'paper') {
     game();
