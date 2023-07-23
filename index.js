@@ -7,6 +7,9 @@ let computerScore = 0;
 
 function primeUserChoice () {
   userChoice = prompt ('Rock, Scissors, Paper... Please make your move');
+  if (userChoice == null) {
+    alert ('You aborted this game. To start new game just refresh the page.');
+  } 
   switch (userChoice.toLowerCase()) {
   case 'rock':
     return userChoice = 'rock';
@@ -18,10 +21,6 @@ function primeUserChoice () {
     primeUserChoice();
   }
 } 
- 
-// if (userChoice === null) {
-//   return alert ('You aborted this game. To start new game just refresh the page.');
-// }
 
 function randomNumber (numMin, numMax) {
   return Math.floor(Math.random() * (numMax - numMin) + numMin);
@@ -43,8 +42,8 @@ function game () {
   }
 }
 
-for (let i = 0; i < 1;) {   
-  if (userScore === 3) {
+for (let i = 0; i < 1;) {  
+if (userScore === 3) {
     alert (`Congratulations. You won this game. Count - You: ${userScore} : Computer ${computerScore}`);
     i++;
   } else if ( computerScore === 3) {
